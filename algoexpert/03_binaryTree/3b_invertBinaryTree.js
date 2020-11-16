@@ -1,16 +1,21 @@
 const { helper: utils, log, line } = require('../../__common/utils');
 const { BinaryTreeNode } = require('../../__common/data_structures/0_node');
  
-// 🕑 O(t)
+// 🕑 O(n)
 // 🛰 O(n)
-const nodeDepths = t => {
-	return helper(t, 0);
+const invertBinaryTree = t => {
+	if (!t) return;
+	swapLR(t);
+	invertBinaryTree(t.left);
+	invertBinaryTree(t.right);
+
+	return t;
 }
 
-let helper = (t, d) => {
-	if (t === null) return 0;
-	console.log('t, d', t.value, d)
-	return d + helper(t.left, d + 1) + helper(t.right, d + 1);
+const swapLR = t => {
+	const left = t.left;
+	t.left = t.right;
+	t.right = left;
 }
  
 const main = () => {
@@ -27,8 +32,7 @@ const main = () => {
 
 	tree.left.left.left = new BinaryTreeNode(8);
 	tree.left.left.right = new BinaryTreeNode(9);
-
-	log(nodeDepths(tree))
+	log(invertBinaryTree(tree))
 }
  
 main();

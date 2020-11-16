@@ -1,16 +1,20 @@
 const { helper: utils, log, line } = require('../../__common/utils');
 const { BinaryTreeNode } = require('../../__common/data_structures/0_node');
  
-// 🕑 O(t)
-// 🛰 O(n)
-const nodeDepths = t => {
-	return helper(t, 0);
-}
+// 🕑 O()
+// 🛰 O()
+const binaryTreeRightView = t => {
+	const fh = (t, currDepth = 0) => {
+		if (!t) return;
+		if (currDepth === result.length) result.push(t.value);
 
-let helper = (t, d) => {
-	if (t === null) return 0;
-	console.log('t, d', t.value, d)
-	return d + helper(t.left, d + 1) + helper(t.right, d + 1);
+		fh(t.right, currDepth+1);
+		fh(t.left, currDepth+1);
+	}
+
+	let result = [];
+	fh(t);
+	return result;
 }
  
 const main = () => {
@@ -27,8 +31,9 @@ const main = () => {
 
 	tree.left.left.left = new BinaryTreeNode(8);
 	tree.left.left.right = new BinaryTreeNode(9);
-
-	log(nodeDepths(tree))
+	
+	tree.left.right.left = new BinaryTreeNode(10);
+	log(binaryTreeRightView(tree))
 }
  
 main();

@@ -101,24 +101,6 @@ const helper = {
 }
 
 /******************
- * 2D ARRAY PRINT
- ******************/
-const pm = (m, i, j) => {
-	for (let row = 0; row < m.length; row++) {
-		for (let col = 0; col < m[row].length; col++) {
-			if (m[row][col] < 10 && m[row][col] >= 0) {
-				if (i && j && row === i && col === j) {
-					write(color(`${m[row][col]} `, "yellow"));
-				} else {
-					write(color(`${m[row][col]} `, "green"));
-				}
-			}
-		}
-		log('');
-	}
-}
-
-/******************
  * LINKED LIST PRINT
  ******************/
 
@@ -208,6 +190,47 @@ const listToArray = list => {
 	return a;
 }
 
+
+/******************
+ * BST FUNCTIONS
+ ******************/
+const binarySearchTreeHelper = {
+	prettyPrint(tree) {
+	
+	},
+    treeToArrDFS(t) {
+		const fh = t => {
+			if (!t) return;
+			result.push(t.value);
+			fh(t.left);
+			fh(t.right);
+		}
+
+		let result = [];
+		fh(t)
+		console.log('result', result)
+		return result;
+	},
+	treeToArrBFS(t) {
+		let arr = [t];
+		let result = [];
+
+		while (arr.length) {
+			let current = arr.shift();
+			if (current.left) arr.push(current.left);
+			if (current.right) arr.push(current.right);
+			result.push(current.value);
+		}
+
+		console.log('result', result)
+		return result;
+	}
+}
+// DFS: 1 2 4 5 3 6 7
+// BFS: 1 2 3 4 5 6 7
+
+
+
 /******************
  * HELPER FUNCTIONS
  ******************/
@@ -287,6 +310,7 @@ module.exports = {
 	line,
 	log,
 	linkedListHelper,
+	binarySearchTreeHelper,
 	helper,
 	helperFunctions,
 }

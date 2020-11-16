@@ -30,7 +30,7 @@ const main = () => {
 	tree.right.right = new BinaryTreeNode(22);
 
 	tree.left.left.left = new BinaryTreeNode(1);
-	tree.right.left.right = new BinaryTreeNode(14);
+	tree.right.left.right = new BinaryTreeNode(12);
 
 	log(findClosestValue(tree, 12))
 }
