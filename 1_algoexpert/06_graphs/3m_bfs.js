@@ -3,17 +3,21 @@ const { BinaryTreeNode } = require('../../__common/data_structures/0_node');
  
 // 🕑 O()
 // 🛰 O()
-const depthFirstSearch = g => {
-	let arr = [];
+const bfs = g => {
+	let arr = [g];
+	let res = [];
 
-	arr.push(g.value);
+	while (arr.length) {
+		let curr = arr.shift();
+		res.push(curr.value);
 
-	for (const child in g.children) 
-		depthFirstSearch(child);
+		if (curr.left) arr.push(curr.left);
+		if (curr.right) arr.push(curr.right);
+	}
 
-	return arr;
+	return res;
 }
-
+ 
 const main = () => {
 	let graph = new BinaryTreeNode(1);
 
@@ -28,8 +32,7 @@ const main = () => {
 
 	graph.left.left.left = new BinaryTreeNode(8);
 	graph.left.left.right = new BinaryTreeNode(9);
-	log(depthFirstSearch(graph));
-
+	log(bfs(graph));
 }
  
 main();
