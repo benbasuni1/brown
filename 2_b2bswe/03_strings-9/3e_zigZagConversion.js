@@ -35,22 +35,3 @@ const main = () => {
 }
  
 main();
-
-/*
-	const result = Array(rows).fill("");
-	
-	let row = 0;
-	let down = false;
-
-	for (let i = 0; i < s.length; i++) {
-		result[row] += s.charAt(i);
-
-		if (row == 0 || row == rows - 1) down = !down;
-
-		if (rows > 1) {
-			if (down) row++;
-			else row--;
-		}
-	}
-	return combine(result);
-*/

@@ -1,7 +1,7 @@
 const { helper: utils, log, line } = require('../../__common/utils');
  
-// 🕑 O()
-// 🛰 O()
+// 🕑 O(n)
+// 🛰 O(n)
 const enumeratePrimesToN = n => {
 	if (n <= 1) return []
 	
