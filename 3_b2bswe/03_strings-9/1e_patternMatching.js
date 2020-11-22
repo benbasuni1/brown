@@ -1,7 +1,7 @@
 const { helper: utils, log, line } = require('../../__common/utils');
  
 // 🕑 O(n)
-// 🛰 O(1)
+// 🛰 O(n)
 const patternMatching = (words, pattern) => {
 	let result = [];
 

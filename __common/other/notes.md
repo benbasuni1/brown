@@ -60,3 +60,6 @@ i + 1 => right
 i - 1 => left
 j + 1 => up
 j - 1 => down
+
+## Hash maps
+"item.hasOwnProperty(a)" is the same as "(a in item)"

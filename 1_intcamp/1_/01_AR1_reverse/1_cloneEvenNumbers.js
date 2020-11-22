@@ -4,15 +4,12 @@ const u = require('../../__common/utils');
 // Time  o(n)
 // Space o(1)
 const cloneEvenNumbers = a => {
-	let i, e;
-
-	i = getLastNumber(a);
-	e = a.length;
+	let i = getLastNumber(a);
+	let e = a.length;
 	
 	if (a === null || a.length <= 0) return null;
 
 	while (e >= 0) {
-		u.par(a, i, e);
 		if (a[i] % 2 === 0) a[--e] = a[i];
 		a[--e] = a[i];
 		i--;

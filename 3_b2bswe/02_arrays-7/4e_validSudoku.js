@@ -1,12 +1,50 @@
 const { helper: utils, log, line } = require('../../__common/utils');
  
-// 🕑 O()
-// 🛰 O()
-const validSudoku = a => {
+// 🕑 O(mn)
+// 🛰 O(n)
+const validSudoku = m => {
+	for (let i = 0; i < 9; i++) {
+		let rowMap = {};
+		let colMap = {};
+		let boxMap = {};
+
+		for (let j = 0; j < 9; j++) {
+			let row = m[i][j];
+			let col = m[j][i];
+			let box = m[3 * Math.floor(i / 3) + Math.floor(j / 3)][3 * (i % 3) + (j % 3)];
+
+			if (row !== '.') {
+				if (rowMap.hasOwnProperty(row)) return false;
+				rowMap[row] = 1;
+			}
+			
+			if (col !== '.') {
+				if (colMap.hasOwnProperty(col)) return false;
+				colMap[col] = 1;
+			}
+
+			if (box !== '.') {
+				if (boxMap.hasOwnProperty(box)) return false;
+				boxMap[box] = 1;
+			}
+		}
+	}
+
+	return true;
 }
  
 const main = () => {
-	log(validSudoku())
+	log(validSudoku([
+		["5","3",".",".","7",".",".",".","."]
+		,["6",".",".","1","9","5",".",".","."]
+		,[".","9","8",".",".",".",".","6","."]
+		,["8",".",".",".","6",".",".",".","3"]
+		,["4",".",".","8",".","3",".",".","1"]
+		,["7",".",".",".","2",".",".",".","6"]
+		,[".","6",".",".",".",".","2","8","."]
+		,[".",".",".","4","1","9",".",".","5"]
+		,[".",".",".",".","8",".",".","7","9"]
+	]))
 }
  
 main();
