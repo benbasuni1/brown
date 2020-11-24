@@ -3,6 +3,7 @@ const { helper: utils, log, line } = require('../../__common/utils');
 // 🕑 O(n)
 // 🛰 O(1)
 const findMinDiff = a => {
+	utils.start(a);
 	let seen = Array(24 * 60).fill(false);
 
 	for (time of a) {

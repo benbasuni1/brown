@@ -3,8 +3,7 @@ const { helper: utils, log, line } = require('../../__common/utils');
 // 🕑 O()
 // 🛰 O()
 const wordSubsets = (A, B) => {
-	const bCount = Array(26);
-	bCount.fill(0);
+	const bCount = Array(26).fill(0);
   
 	// Collecting the constraints into a character mapping
 	for (let i = 0; i < B.length; i++) {

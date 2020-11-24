@@ -3,6 +3,7 @@ const { helper: utils, log, line } = require('../../__common/utils');
 // 🕑 O(mn)
 // 🛰 O(1)
 const rotate90 = a => {
+	utils.start(a);
 	let size = a.length - 1;
 
 	for (let layer = 0; layer < Math.floor(a.length / 2); layer++) {

@@ -10,18 +10,22 @@ const replaceWordsPrefix = (prefixes, sentence) => {
 	for(let i = 0; i < prefixes.length; i++)
 		map[prefixes[i]] = true;
 	
+	console.log('map', map)
+	line();
+
 	// Loop through words, and each word
 	for(let i = 0; i < words.length; i++) {
-	  let word = words[i];
-	  
-	  for(let j = 0; j < word.length; j++) {
+		let word = words[i];
+		for(let j = 0; j < word.length; j++) {
 
-		// If the word contains a prefix, change
-		if(word.substring(0, j) in map) {
-		  words[i] = word.substring(0, j);
-		  break;
+			// If the word contains a prefix, change
+			console.log('word.substring(0,j)', word.substring(0,j + 1))
+			if(map[word.substring(0, j + 1)]) {
+				words[i] = word.substring(0, j + 1);
+				break;
+			}
 		}
-	  }
+		line();
 	}
 	
 	return words.join(" ");

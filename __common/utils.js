@@ -11,7 +11,7 @@ const helper = {
 	start: (a, k) => {
 		log('--START--'.bgBlue.black)
 		if (a) log('input:', a);
-		if (k) log('target:', k);
+		if (k || k === 0) log('target:', k);
 		line();
 	},
 	found: msg => {
@@ -22,20 +22,46 @@ const helper = {
 	vars: (...args) => {
 		for (let i = 0; i < args.length; i++) {
 			if (i !== args.length - 1) {
-				if (i === 0)
+				if (i === 0 && args[0] !== '' && args[1] !== '')
 					write(`${args[i]}:`.bgCyan.black);
-				else if (i === 2)
+				else if (i === 2 && args[2] !== '')
 					write(`${args[i]}:`.bgGreen.black);
 				else if (i === 4)
-					write(`${args[i]}:`.bgYellow.black);
+					write(`${args[i]}:`.bgRed.black);
 				else if (i === 6)
-					write(`${args[i]}:`.bgWhite.black);
+					write(`${args[i]}:`.bgYellow.black);
+				else if (i === 8)
+					write(`${args[i]}:`.bgBlue.black);
+				else if (i === 10)
+					write(`${args[i]}:`.bgMagenta.black);
 				else log(` ${args[i]}`);
 			}
 			else 
 				log(` ${args[i]}`);
 		}
 		line();
+	},
+	vars2: (...args) => {
+		for (let i = 0; i < args.length; i++) {
+			if (i !== args.length - 1) {
+				if (i === 0)
+					write(`${args[i]}:`.bgGreen.black);
+				else if (i === 2 && args[2] !== '')
+					write(`${args[i]}:`.bgYellow.black);
+				else if (i === 4)
+					write(`${args[i]}:`.bgRed.black);
+				else if (i === 6)
+					write(`${args[i]}:`.bgBlue.black);
+				else if (i === 8)
+					write(`${args[i]}:`.bgCyan.black);
+				else if (i === 10)
+					write(`${args[i]}:`.bgMagenta.black);
+				else log(` ${args[i]}`);
+			}
+			else 
+				log(` ${args[i]}`);
+		}
+		// line();
 	},
 	prettyPrint: (a, ...args) => {
 		let msg = '[';
@@ -105,7 +131,13 @@ const helper = {
  ******************/
 
 const linkedListHelper = {
-	print: (ll, label) => {
+	start: (a, k) => {
+		log('--START--'.bgBlue.black)
+		if (a) linkedListHelper.print('input', a);
+		if (k || k === 0) log('target:', k);
+		line();
+	},
+	print: (label, ll) => {
 		if (ll === null) return;
 		let list = listToArray(ll);
 
@@ -116,7 +148,6 @@ const linkedListHelper = {
 
 		if (list.length === 1) {
 			log(color(`${list[0].value}`, "blue"));
-			pl();
 			return;
 		}
 
@@ -138,7 +169,6 @@ const linkedListHelper = {
 		}
 
 		console.log('')
-		pl()
 	},
 	pointers: (ll, x, y, label) => {
 		if (ll === null) return;
@@ -173,23 +203,22 @@ const linkedListHelper = {
 
 const listToArray = list => {
 	let a = [];
-	let node = list.head;
+	let node = list.head || list;
 	let i = 0;
 
-	while (node !== null && i !== list.length) {
+	while (node) {
 		a.push({
 			value : node.value,
 			next  : (node.next) ? node.next.value : null,
 			head : node === list.head ? 1 : 0,
 			tail : node === list.tail ? 1 : 0
-		});
+		})
 		node = node.next;
 		i++;
 	}
 
 	return a;
 }
-
 
 /******************
  * BST FUNCTIONS
@@ -228,8 +257,6 @@ const binarySearchTreeHelper = {
 }
 // DFS: 1 2 4 5 3 6 7
 // BFS: 1 2 3 4 5 6 7
-
-
 
 /******************
  * HELPER FUNCTIONS

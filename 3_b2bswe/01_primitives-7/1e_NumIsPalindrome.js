@@ -3,6 +3,7 @@ const { helper: utils, log, line } = require('../../__common/utils');
 // 🕑 O(n)
 // 🛰 O(1)
 const isPalindrome = x => {
+	utils.start(x)
 	if (x < 0) return false;
 
 	// Get length of a number
@@ -18,6 +19,7 @@ const isPalindrome = x => {
 		//+right
 		let right = x % 10;
 
+		utils.vars('x', x, 'left', left, 'right', right);
 		if (left !== right) return false;
 
 		//-left
@@ -35,11 +37,11 @@ const isPalindrome = x => {
  
 const main = () => {
 	// F F T T F
-	log(isPalindrome(1234))
-	log(isPalindrome(923498291391823))
-	log(isPalindrome(12321))
-	log(isPalindrome(1))
-	log(isPalindrome(-121))
+	// log(isPalindrome(1234))
+	log(isPalindrome(23498211289432))
+	// log(isPalindrome(12321))
+	// log(isPalindrome(1))
+	// log(isPalindrome(-121))
 }
  
 main();

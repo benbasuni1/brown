@@ -9,6 +9,7 @@ const validPalindrome = s => {
 	let j = s.length - 1;
 
 	while (i <= j) {
+		utils.prettyPrint(s, i, j);
 		if (s[i] !== s[j]) return false;
 		i++;
 		j--;

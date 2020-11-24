@@ -3,6 +3,7 @@ const { helper: utils, log, line } = require('../../__common/utils');
 // 🕑 O(n^2)
 // 🛰 O(n)
 const threeSum = a => {
+	utils.start(a, 0);
 	a.sort((a, b) => a - b);
 	let result = [];
 
@@ -12,6 +13,8 @@ const threeSum = a => {
 		let right = a.length - 1;
 		while (left < right) {
 			let sum = a[i] + a[left] + a[right];
+			utils.prettyPrint(a, i, left, right);
+			utils.vars2(`${a[i]} + ${a[left]} + ${a[right]} = ${sum}`)
 			if (sum === 0) {
 				result.push([a[i], a[left], a[right]]);
 				left++;
@@ -28,8 +31,8 @@ const threeSum = a => {
  
 const main = () => {
 	log(threeSum([-3, -1, 1, 0, 2, 10, -2, 8]))
-	log(threeSum([-5, 3, 2, 0, 1, -1, -5, 3, 2]))
-	log(threeSum([1, 2, 3, 4]))
+	// log(threeSum([-5, 3, 2, 0, 1, -1, -5, 3, 2]))
+	// log(threeSum([1, 2, 3, 4]))
 }
  
 main();

@@ -3,6 +3,7 @@ const { helper: utils, log, line } = require('../../__common/utils');
 // 🕑 O(m + n)
 // 🛰 O(1)
 const addStrings = (s1, s2) => {
+	utils.start([s1, s2]);
 	let i = s1.length - 1;
 	let j = s1.length - 1;
 	let carry = 0;
@@ -21,9 +22,10 @@ const addStrings = (s1, s2) => {
 		sum += num2;
 		j--;
 	  }
-  
+
 	  carry = parseInt(sum / 10);
 	  result += (sum % 10).toString();
+	  utils.vars('num1', num1, 'num2', num2, 'sum', sum);
 	}
   
 	if (carry !== 0) result += carry.toString();
@@ -32,7 +34,7 @@ const addStrings = (s1, s2) => {
 };
  
 const main = () => {
-	log(addStrings("15", "20"))
+	log(addStrings("114", "239"))
 }
  
 main();
