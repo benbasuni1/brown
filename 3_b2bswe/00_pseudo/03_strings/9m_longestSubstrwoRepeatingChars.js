@@ -1,9 +1,11 @@
-// ui.rj.um.ij
-// 🕑 O(n)
-// 🛰 O(n)
-// 9. Longest Subsequence(<Str s>) : int
+/*  
+	🕑 O(n) -- 🛰 O(n)
+	9. Longest Subsequence
+	Input  : (<String s>) 
+	Output : (<int>)
+*/
 
-fn longestSubsequence(<Str s>) : int {
+longestSubsequence(<String s>) : <int> {
 	i, j = 0
 	maxCount = 0
 	map{}

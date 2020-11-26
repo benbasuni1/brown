@@ -1,8 +1,11 @@
-// 🕑 O(n)
-// 🛰 O(n)
-// 2. Longest Palindrome String (s) : int
+/*  
+	🕑 O(n) -- 🛰 O(n)
+	2. Longest Palindrome String
+	Input  : (<String s>) 
+	Output : (<int>)
+*/
 
-fn longestPalindromeString(s) : int {
+longestPalindromeString(<String s>) : <int> {
 	map{}, count = 0
 
 	(let letter of s):
@@ -11,5 +14,5 @@ fn longestPalindromeString(s) : int {
 		else 
 			delete map[letter]; count++
 
-	return keys(map) ? count * 2 + 1 : count;
+	return keys(map) ? (count*2) + 1 : count;
  }

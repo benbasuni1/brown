@@ -1,16 +1,20 @@
-// 🕑 O(n^2)
-// 🛰 O(n)
-// 6. Replace Words Prefix(Arr Str<prefixes>, Str sentence): Str
+/*  
+	🕑 O(n^2) -- 🛰 O(n)
+	6. Replace Words Prefix
+	Input  : (<Arr <Str prefixes> >, <String sentence>) 
+	Output : (<Str>)
+*/
 
-fn replaceWordPrefix(Arr <Str prefixes>, Str sentence) : Str {
+replaceWordsPrefix(<Arr <String prefixes> >, <String sentence> ) :
+<String> { 
 	words = sentence.split('');
 	map{}
 
 	(let prefix of prefixes) map[prefix] = true
 
-	(0; i < len(words)):
+	(i < len(words)):
 		word = words[i]
-		(0; j < word):
+		(j < word):
 			if (map[word.substr(j + 1)]):
 				words[i] = word.substr(0, j + 1); break;
 	
