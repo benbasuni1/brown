@@ -9,12 +9,10 @@
 	(lay < len(a) / 2) 
 		(i = lay; i < size - lay) 
 			top, right, bot, left = 
-			a[lay][i][size - lay][size - i]
+			a.lay.i.size-lay.size-i
 
-			lay.i = left
-			i.size-lay = top
-			size-lay.size-i = right
-			size-i.lay = bot
+			a.lay.i.size-lay.size-i = 
+			left, top, right, bot
 
 	return a
 }
