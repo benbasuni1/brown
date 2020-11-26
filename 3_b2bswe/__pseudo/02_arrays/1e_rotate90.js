@@ -4,7 +4,7 @@
 
 size = len(a) - 1;
 
-(0; layer < len(a) / 2) 
+(layer < len(a) / 2) 
 	(i = layer; i < size - layer) 
 		top, right, bot, left = 
 			a[layer][i][size - layer][size - i]
