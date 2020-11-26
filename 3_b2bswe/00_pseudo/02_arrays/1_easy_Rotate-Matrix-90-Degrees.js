@@ -5,7 +5,7 @@
 	Output : (<Arr <Arr>>) 
 */
 
-{
+rotate90(<Array> a) : <Array> {
 	size = len(a) - 1;
 
 	(lay < len(a) / 2):

@@ -10,7 +10,7 @@
 	(y) : x2 >= x ; _.y ++
 */
 
-{
+spiralTraversal(<Array> a) : <Array> {
 	x, y = 0
 	x2 = len(m) - 1
 	y2 = len(m[0]) - 1
