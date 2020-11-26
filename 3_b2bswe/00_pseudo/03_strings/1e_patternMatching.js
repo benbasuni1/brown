@@ -5,8 +5,7 @@
 	Output : (<Bool>)
 */
 
-patternMatch(<Array <String words>>, <String pattern>) : 
-<Bool> {
+patternMatch(words, pattern) : <Bool> {
 	result = []
 
 	(word of words):
@@ -16,7 +15,7 @@ patternMatch(<Array <String words>>, <String pattern>) :
 	return result;
 }
 
-patternCheck(<String s1>, <String s2>) : <Bool> {
+patternCheck(s1, s2) : <Bool> {
 	s1Map, s2Map {}
 	(i < len(s2)):
 		if (!s1Map[s1.i]) s1Map[s1.i] = s2Char;
