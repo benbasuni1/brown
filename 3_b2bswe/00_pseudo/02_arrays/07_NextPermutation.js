@@ -5,7 +5,7 @@
 	Output : (<Arr int>)
 */
 
-{
+nextPermutation(<Array int a>) : <Array int> {
 	i = len(a) - 2
 	j = len(a) - 1
 
@@ -15,5 +15,5 @@
 		while (a.i >= a.j) j--;
 		swap(a.i, a.j)
 
-	return reverse(a, i + 1)
+	∆ reverse(a, i + 1)
 }

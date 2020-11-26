@@ -16,5 +16,5 @@ rotate90(<Array> a) : <Array> {
 			a.lay.i.size-lay.size-i = 
 			left, top, right, bot
 
-	return a
+	∆ a
 }

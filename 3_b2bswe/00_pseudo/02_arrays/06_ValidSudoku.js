@@ -5,7 +5,7 @@
 	Output : (<Bool>)
 */
 
-{
+validSudoku(<Array <Array a> >) : <Bool> {
 	(i < 9):
 		rowMap{}, colMap{}, boxMap{}
 		(j < 9):
@@ -14,8 +14,8 @@
 				   [3(i%3) + 3(j%3)]
 
 			if (row|col|box != '.')
-				if (map[row|col|box]) return false
+				if (map[row|col|box]) ∆ false
 				map[row|col|box] = 1
 
-	return true
+	∆ true
 }

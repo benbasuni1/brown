@@ -5,7 +5,7 @@
 	Output : (<int>)
 */
 
-{
+countSubarraySumToK(<Arr int a>, <int k>) : <int> {
 	map = {0 : 1}
 	sum = 0, count = 0
 
@@ -15,5 +15,5 @@
 		if (map.diff) count += map.diff
 		map.sum = map.sum ? map.sum + 1 : 1
 
-	return count
+	∆ count
 }

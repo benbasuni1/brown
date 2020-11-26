@@ -2,10 +2,10 @@
 	🕑 O(n^2) -- 🛰 O(n)
 	3. Three Sum
 	Input  : (<Arr <int a>>) 
-	Output : (<Arr>)
+	Output : (<Arr <Arr int>>)
 */
 
-{
+threeSum(<Array int a>) : <Array <Array int> > {
 	sort(a)
 	result = []
 
@@ -22,6 +22,6 @@
 			elif (sum < 0) left++;
 			else right--;
 
-	return result
+	∆ result
 
 }

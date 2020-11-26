@@ -27,5 +27,5 @@ spiralTraversal(<Array> a) : <Array> {
 		if (y <= y2):
 			(x2; i >= x) +(m[i][y]);  y++
 
-	return result;
+	∆ result;
 }
