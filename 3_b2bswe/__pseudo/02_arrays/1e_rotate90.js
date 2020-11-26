@@ -9,8 +9,8 @@
 {
 	 size = len(a) - 1;
 
-	(lay < len(a) / 2) 
-		(i = lay; i < size - lay) 
+	(lay < len(a) / 2):
+		(i = lay; i < size - lay):
 			top, right, bot, left = 
 			a.lay.i.size-lay.size-i
 
