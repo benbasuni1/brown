@@ -12,7 +12,7 @@ patternMatch(
 	result = []
 
 	(word of words):
-		if (len(word) === len(pattern)):
+		if (len(word) == len(pattern)):
 			if (patternCheck(pattern, word)) +(word)
 
 	return result;
