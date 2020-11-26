@@ -7,8 +7,8 @@ const replaceWordsPrefix = (prefixes, sentence) => {
 	let map = {};
 	
 	// Add prefix to map
-	for(let i = 0; i < prefixes.length; i++)
-		map[prefixes[i]] = true;
+	for(let prefix of prefixes)
+		map[prefix] = true;
 	
 	console.log('map', map)
 	line();

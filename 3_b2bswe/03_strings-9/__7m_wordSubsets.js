@@ -33,12 +33,9 @@ const wordSubsets = (A, B) => {
   }
   
   const count = (word) => {
-	const output = Array(26);
-	output.fill(0);
+	const output = Array(26).fill(0);
   
-	for (let i = 0; i < word.length; i++) {
-	  const letter = word.charAt(i);
-  
+	for (let letter of word) {
 	  const idx = letter.charCodeAt(0) - "a".charCodeAt(0);
 	  output[idx] += 1;
 	}

@@ -7,7 +7,7 @@ const longestPalindromeString = s => {
 	let map = {};
 	let count = 0;
 	
-	for (let i = 0; i < s.length; i++) {
+	for (let letter of s) {
 		let letter = s[i];
 
 		// add or del letter. inc+1 if deleted
