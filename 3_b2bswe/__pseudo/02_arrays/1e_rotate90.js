@@ -1,8 +1,9 @@
 // 🕑 O(mn)
 // 🛰 O(1)
-// 1. Rotate 90 Degrees
-
-fn rotate90(<Arr <Arr a>) : <Arr <Arr>> {
+// 1. Rotate90
+// Input  : (<Arr <Arr a>) 
+// Output : (<Arr <Arr>>)
+{
 	size = len(a) - 1;
 
 	(lay < len(a) / 2) 
