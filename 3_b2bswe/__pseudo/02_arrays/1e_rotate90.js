@@ -1,10 +1,13 @@
-// 🕑 O(mn)
-// 🛰 O(1)
-// 1. Rotate90
-// Input  : (<Arr <Arr a>) 
-// Output : (<Arr <Arr>>)
+
+/*  
+	🕑 O(mn) -- 🛰 O(1)
+	1. Rotate90
+	Input  : (<Arr <Arr a>) 
+	Output : (<Arr <Arr>>) 
+*/
+
 {
-	size = len(a) - 1;
+	 size = len(a) - 1;
 
 	(lay < len(a) / 2) 
 		(i = lay; i < size - lay) 
