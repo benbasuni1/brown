@@ -4,10 +4,10 @@
 	Input  : (<Arr <Arr int a>>) 
 	Output : (<Arr <Arr>>)
 
-	y < y2 ; x.i  ; x++
-	x < x2 ; i.y2 ; y2--
-	x : y2 > y ; x2.i ; x2--
-	y : x2 > x ; i.y  ; y++
+	    y <= y2 ; x._  ; x++
+	    x <= x2 ; _.y2 ; y2--
+	x : y2 >= y ; x2._ ; x2--
+	y : x2 >= x ; _.y  ; y++
 */
 
 {
