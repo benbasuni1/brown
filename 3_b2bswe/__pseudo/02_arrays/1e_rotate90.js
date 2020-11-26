@@ -6,7 +6,7 @@
 */
 
 {
-	 size = len(a) - 1;
+	size = len(a) - 1;
 
 	(lay < len(a) / 2):
 		(i = lay; i < size - lay):
