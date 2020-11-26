@@ -5,12 +5,15 @@
 	Output : (<Bool>)
 */
 
-patternMatch(<Array <String words>>, <String pattern>) : <Bool> {
+patternMatch(
+	<Array <String words>>, 
+	<String pattern>) : 
+<Bool> {
 	result = []
 
 	(word of words):
 		if (len(word) === len(pattern)):
-			if (patternCheck(pattern, word)) result.push(word)
+			if (patternCheck(pattern, word)) +(word)
 
 	return result;
 }
