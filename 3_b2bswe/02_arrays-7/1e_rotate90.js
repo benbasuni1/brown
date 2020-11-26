@@ -12,6 +12,8 @@ const rotate90 = a => {
 			let right = a[i][size - layer];
 			let bot = a[size - layer][size - i];
 			let left = a[size - i][layer];
+			utils.print2D(a, top, right, bot, left);
+			utils.vars('top', top, 'right', right, 'bot', bot, 'left', left);
 
 			a[layer][i] = left;
 			a[i][size - layer] = top;

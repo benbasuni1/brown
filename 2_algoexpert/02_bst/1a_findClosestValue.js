@@ -9,7 +9,6 @@ const findClosestValue = (t, x) => {
 
 const helper = (t, x, diff) => {
 	if (t === null) return diff;
-
 	if (Math.abs(x - t.value) < Math.abs(x - diff)) diff = t.value;
 
 	if (t.value === x) return diff;

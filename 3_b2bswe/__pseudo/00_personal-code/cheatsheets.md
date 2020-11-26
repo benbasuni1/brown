@@ -24,3 +24,20 @@ x = x >> 1
 
 // See last()
 // x & 1 
+
+arrays 
+strings
+linked lists
+stacks/queues
+
+// dfs or bfs
+trees
+heaps
+graphs
+
+search
+sort
+
+hashtables
+recursion
+dp

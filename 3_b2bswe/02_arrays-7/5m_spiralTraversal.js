@@ -10,6 +10,8 @@ const spiralTraversal = m => {
 	let result = [];
 
 	while (initRow <= endRow && initCol <= endCol) {
+		utils.vars('initRow', initRow, 'initCol', initCol, 'endRow', endRow, 'endCol', endCol);
+
 		for (let i = initCol; i <= endCol; i++) {
 			result.push(m[initRow][i]);
 		}

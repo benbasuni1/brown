@@ -24,17 +24,17 @@ const addStrings = (s1, s2) => {
 	  }
 
 	  carry = parseInt(sum / 10);
-	  result += (sum % 10).toString();
-	  utils.vars('num1', num1, 'num2', num2, 'sum', sum);
+	  result = (sum % 10).toString() + result;
+	  utils.vars('num1', num1, 'num2', num2, 'sum', sum, 'carry', carry, 'result', result);
 	}
   
 	if (carry !== 0) result += carry.toString();
   
-	return result.split("").reverse().join("");
+	return result;
 };
  
 const main = () => {
-	log(addStrings("114", "239"))
+	log(addStrings("146", "239"))
 }
  
 main();

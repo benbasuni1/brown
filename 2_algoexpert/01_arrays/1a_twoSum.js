@@ -9,7 +9,7 @@ const twoSum = (a, x) => {
 		let item = a[i];
 		let diff = x - item;
 
-		if (storage.hasOwnProperty(diff)) return [storage[diff], i];
+		if (storage[diff]) return [storage[diff], i];
 
 		storage[item] = i;
 	}

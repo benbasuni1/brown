@@ -1,12 +1,7 @@
 require('colors');
-/******************
- * BASIC PRINT
- ******************/
  const line = () => log("----------------------------------".rainbow);
 
-/******************
- * DEFAULT HELPER
- ******************/
+/* 1. Helper */
 const helper = {
 	start: (a, k) => {
 		log('--START--'.bgBlue.black)
@@ -19,11 +14,64 @@ const helper = {
 		if (typeof msg === 'object') log(`found: [${msg}]`.bgMagenta.black);
 		else log(`found: ${msg}`.bgMagenta.black);
 	},
+	prettyPrint: (a, ...args) => {
+		let msg = '[';
+
+		for (let i = 0; i < a.length; i++) {
+			if (i === args[0] && i === a.length - 1) {
+				msg += `${a[i]}`.bgRed.black;
+			} else if (i === args[0] && i !== a.length - 1) {
+				msg += `${a[i]}`.bgRed.black + ', ';
+			} else if (i === args[1] && i === a.length - 1) {
+				msg += `${a[i]}`.bgGreen.black;
+			} else if (i === args[1] && i !== a.length - 1) {
+				msg += `${a[i]}`.bgGreen.black + ', ';
+			} else if (i === args[2] && i === a.length - 1) {
+				msg += `${a[i]}`.bgBlue.black;
+			} else if (i === args[2] && i !== a.length - 1) {
+				msg += `${a[i]}`.bgBlue.black + ', ';
+			} else if (i === a.length - 1) {
+				msg += `${a[i]}`;
+			} else {
+				msg += `${a[i]}, `;
+			}
+		}
+	
+		msg += ']';
+	
+		console.log(msg);
+	},
+	print2D: (a, ...args) => {
+		let msg = '';
+		for (let i = 0; i < a.length; i++) {
+			msg += '['
+			for (let j = 0; j < a[i].length; j++) {
+				if (args[0] === a[i][j]) 
+					msg += `${a[i][j]}`.bgBlue.black;
+				else if (args[1] === a[i][j]) 
+					msg += `${a[i][j]}`.bgGreen.black;
+				else if (args[2] === a[i][j]) 
+					msg += `${a[i][j]}`.bgRed.black;
+				else if (args[3] === a[i][j]) 
+					msg += `${a[i][j]}`.bgYellow.black;
+				else if (args[4] === a[i][j]) 
+					msg += `${a[i][j]}`.bgWhite.black;
+				else
+					msg += `${a[i][j]}`
+
+				if (j === a.length - 1) msg += `]`
+				else msg += ', '
+			}
+			msg += '\n'
+		}
+
+		console.log(msg)
+	},
 	vars: (...args) => {
 		for (let i = 0; i < args.length; i++) {
 			if (i !== args.length - 1) {
 				if (i === 0 && args[0] !== '' && args[1] !== '')
-					write(`${args[i]}:`.bgCyan.black);
+					write(`${args[i]}:`.bgBlue.black);
 				else if (i === 2 && args[2] !== '')
 					write(`${args[i]}:`.bgGreen.black);
 				else if (i === 4)
@@ -31,7 +79,7 @@ const helper = {
 				else if (i === 6)
 					write(`${args[i]}:`.bgYellow.black);
 				else if (i === 8)
-					write(`${args[i]}:`.bgBlue.black);
+					write(`${args[i]}:`.bgWhite.black);
 				else if (i === 10)
 					write(`${args[i]}:`.bgMagenta.black);
 				else log(` ${args[i]}`);
@@ -62,33 +110,6 @@ const helper = {
 				log(` ${args[i]}`);
 		}
 		// line();
-	},
-	prettyPrint: (a, ...args) => {
-		let msg = '[';
-
-		for (let i = 0; i < a.length; i++) {
-			if (i === args[0] && i === a.length - 1) {
-				msg += `${a[i]}`.bgRed.black;
-			} else if (i === args[0] && i !== a.length - 1) {
-				msg += `${a[i]}`.bgRed.black + ', ';
-			} else if (i === args[1] && i === a.length - 1) {
-				msg += `${a[i]}`.bgGreen.black;
-			} else if (i === args[1] && i !== a.length - 1) {
-				msg += `${a[i]}`.bgGreen.black + ', ';
-			} else if (i === args[2] && i === a.length - 1) {
-				msg += `${a[i]}`.bgBlue.black;
-			} else if (i === args[2] && i !== a.length - 1) {
-				msg += `${a[i]}`.bgBlue.black + ', ';
-			} else if (i === a.length - 1) {
-				msg += `${a[i]}`;
-			} else {
-				msg += `${a[i]}, `;
-			}
-		}
-	
-		msg += ']';
-	
-		console.log(msg);
 	},
 	baseCase: stringBaseCase => {
 		var msg =
@@ -126,10 +147,7 @@ const helper = {
 	}
 }
 
-/******************
- * LINKED LIST PRINT
- ******************/
-
+/* LINKED LIST */
 const linkedListHelper = {
 	start: (a, k) => {
 		log('--START--'.bgBlue.black)
@@ -220,9 +238,7 @@ const listToArray = list => {
 	return a;
 }
 
-/******************
- * BST FUNCTIONS
- ******************/
+/* BST FUNCTIONS */
 const binarySearchTreeHelper = {
 	prettyPrint(tree) {
 	
@@ -258,11 +274,8 @@ const binarySearchTreeHelper = {
 // DFS: 1 2 4 5 3 6 7
 // BFS: 1 2 3 4 5 6 7
 
-/******************
- * HELPER FUNCTIONS
- ******************/
-
- const helperFunctions = {
+/* HELPER FUNCTIONS */
+const helperFunctions = {
 	 getLastNumber() {
 		let i = a.length - 1;
 		while (i >= 0 && a[i] === -1) i--;
@@ -297,39 +310,24 @@ const binarySearchTreeHelper = {
 	}
 }
 
-/******************
- * DEBUG
- ******************/
- const color = (s, col, end = false) => {
-	 let map = {
-		 "regular": 00,
-		 "dim": 02,
-		 "whitebg": 07,
-		 "underline": 21,
-		 "red": 31,
-		 "green": 32,
-		 "yellow": 33,
-		 "blue": 34,
-		 "purple": 35,
-		 "teal": 36,
-	 }
+/* DEBUG */
+const color = (s, col, end = false) => {
+	let map = {
+		"regular": 00,
+		"dim": 02,
+		"whitebg": 07,
+		"underline": 21,
+		"red": 31,
+		"green": 32,
+		"yellow": 33,
+		"blue": 34,
+		"purple": 35,
+		"teal": 36,
+	}
 
 	 return `\u001b[${map[col]}m${s}\u001b[0m`;
  }
 
- const cd = () => {
-	 log('regular      :  hello,')
-	 log("dim       02 : ", color("hello", "dim"))
-	 log("white bg  07 : ", color("hello", "whitebg"))
-	 log("underline 21 : ", color("hello", "underline"))
-	 log("red       31 : ", color("hello", "red"))
-	 log("green     32 : ", color("hello", "green"))
-	 log("yellow    33 : ", color("hello", "yellow"))
-	 log("blue      34 : ", color("hello", "blue"))
-	 log("purple    35 : ", color("hello", "purple"))
-	 log("teal      36 : ", color("hello", "teal"))
- }
- 
 const write = x => process.stdout.write(x);
 const log = (...args) => args ? console.log(...args) : console.log('');
 
