@@ -5,7 +5,7 @@
 	Output : (<Bool>)
 */
 
-patternMatch(words, pattern) : <Bool> {
+patternMatch(<Array String words>, <String pattern>) : <Bool> {
 	result = []
 
 	(word of words):

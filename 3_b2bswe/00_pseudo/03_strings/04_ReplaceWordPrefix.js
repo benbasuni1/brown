@@ -5,7 +5,7 @@
 	Output : (<Str>)
 */
 
-replaceWordsPrefix(<Arr> prefixes, sentence) : <String> { 
+replaceWordsPrefix(<Array String prefixes>, <String sentence>) : <String> { 
 	words = sentence.split('');
 	map{}
 
