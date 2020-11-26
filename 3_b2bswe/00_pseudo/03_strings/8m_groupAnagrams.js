@@ -5,7 +5,7 @@
 	Output : (<Arr <Str> >)
 */
 
-groupAnagrams(Array a) : <Array <String>> {
+groupAnagrams(Array a) : <Array <String> > {
 	anagrams{}
 
 	(let word of a):
