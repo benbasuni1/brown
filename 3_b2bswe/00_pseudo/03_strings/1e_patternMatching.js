@@ -5,9 +5,7 @@
 	Output : (<Bool>)
 */
 
-patternMatch(
-	<Array <String words>>, 
-	<String pattern>) : 
+patternMatch(<Array <String words>>, <String pattern>) : 
 <Bool> {
 	result = []
 
