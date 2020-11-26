@@ -5,7 +5,7 @@
 	Output : (<int>)
 */
 
-countSubarraySumToK(<Arr int a>, <int k>) : <int> {
+countSubarraySumToK(<Array int a>, <int k>) : <int> {
 	map = {0 : 1}
 	sum = 0, count = 0
 

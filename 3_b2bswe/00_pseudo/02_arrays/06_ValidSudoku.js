@@ -5,7 +5,7 @@
 	Output : (<Bool>)
 */
 
-validSudoku(<Array <Array a> >) : <Bool> {
+validSudoku(<Array2D String a>) : <Bool> {
 	(i < 9):
 		rowMap{}, colMap{}, boxMap{}
 		(j < 9):

@@ -5,7 +5,7 @@
 	Output : (<Arr <Arr int>>)
 */
 
-threeSum(<Array int a>) : <Array <Array int> > {
+threeSum(<Array int a>) : <Array2D int> {
 	sort(a)
 	result = []
 

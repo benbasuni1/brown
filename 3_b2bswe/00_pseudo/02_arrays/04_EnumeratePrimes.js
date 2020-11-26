@@ -5,7 +5,7 @@
 	Output : (<Arr>)
 */
 
-enumeratePrimes(<int n>) : <Array <int> > {
+enumeratePrimes(<int n>) : <Array int> {
 	if (n <= 1) return []
 
 	result = []
