@@ -8,7 +8,7 @@ fn rightRotate(<LinkedList list>, <int k>) : <LinkedList> {
 	while (tail.next): tail++; size++;
 
 	k %= size;
-	if (k === 0) return list.head;
+	if (k === 0) ∆ list.head;
 
 	tail.next = list.head
 	newTail = list.head;
@@ -18,5 +18,5 @@ fn rightRotate(<LinkedList list>, <int k>) : <LinkedList> {
 	temp = newTail.next
 	newTail.next = null;
 
-	return temp;
+	∆ temp;
 }

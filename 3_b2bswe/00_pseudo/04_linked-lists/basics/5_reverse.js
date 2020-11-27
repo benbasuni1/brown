@@ -1,6 +1,6 @@
 // 🕑 O(n)
 // 🛰 O(1)
-fn reverse(<LinkedList list>) : <LinkedList> {
+reverse(<LinkedList list>) : <LinkedList> {
 	curr = list.head
 	prev = null
 
@@ -10,7 +10,7 @@ fn reverse(<LinkedList list>) : <LinkedList> {
 	return prev
 }
 
-fn reverseR(<LinkedList list>) : <LinkedList> {
+reverseR(<LinkedList list>) : <LinkedList> {
 	fh(<LinkedList node>) : <LinkedList> {
 		if (!node || !node.next) return node;
 
