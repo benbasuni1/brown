@@ -3,9 +3,9 @@ const { binarySearchTreeHelper: utils, log, line } = require('../../__common/uti
 
 // 🕑 O(n)
 // 🛰 O(1)
-const isSymmetric = root => {
-	if (!root) return true;
-	return checkSymmetry(root.left, root.right);
+const isSymmetric = t => {
+	if (!t) return true;
+	return checkSymmetry(t.left, t.right);
 }
 	
 

@@ -16,13 +16,13 @@ patternMatch(<Array String words>, <String pattern>) : <Bool> {
 }
 
 patternCheck(s1, s2) : <Bool> {
-	s1Map, s2Map {}
+	map{}
 	(i < len(s2)):
-		if (!s1Map[s1.i]) s1Map[s1.i] = s2Char;
-		if (!s2Map[s2.i]) s2Map[s2.i] = s1Char;
+		if (!map['1's1.i]) map['1's1.i] = s2Char;
+		if (!map['2's2.i]) map['2's2.i] = s1Char;
 
-		if (s1Map[s1.i] !== s2Char || 
-			s2Map[s2.i] !== s1Char) 
+		if (map['1's1.i] !== s2Char || 
+			map['2's2.i] !== s1Char) 
 			return false
 	
 	return true
