@@ -1,19 +1,3 @@
-var KthLargest = function(k, nums) {
-	this.k = k;
-	this.heap = new MinHeap();
-	nums.forEach(n => this.add(n));
-  };
-  
-  KthLargest.prototype.add = function(val) {
-	if (this.heap.size() < this.k) {
-	  this.heap.offer(val);
-	} else if (this.heap.peek() < val) {
-	  this.heap.offer(val);
-	  this.heap.poll();
-	}
-	return this.heap.peek();
-  };
-  
   class MinHeap {
 	constructor(data = []) {
 	  this.data = data;
@@ -57,7 +41,9 @@ var KthLargest = function(k, nums) {
 	bubbleUp(index) {
 	  while (index > 0) {
 		const parentIndex = (index - 1) >> 1;
-		if (this.comparator(this.data[index], this.data[parentIndex]) < 0) {
+		if (this.comparator(this.data[index], 
+			this.data[parentIndex]) < 0) 
+		{
 		  this.swap(index, parentIndex);
 		  index = parentIndex;
 		} else {
