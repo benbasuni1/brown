@@ -4,7 +4,8 @@ const { BinaryTreeNode } = require('../../../__common/data_structures/0_node');
 // 🕑 O(n)
 // 🛰 O(n)
 const maxDepths = t => {
-	return t ? Math.max(maxDepths(t.left), maxDepths(t.right)) + 1 : 0;
+	if (!t) return 0;
+	return Math.max(maxDepths(t.left), maxDepths(t.right)) + 1;
 }
 
 const main = () => {
