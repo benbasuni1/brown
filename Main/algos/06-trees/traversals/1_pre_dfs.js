@@ -1,18 +1,21 @@
 /*
-	🕑 O(n) -- 🛰 O(1)
-	01. PreOrder Traversal
+	🕑 O(n) -- 🛰 O(n)
+	01. PreOrder Traversal (NLR)
 	Input  : (<BinaryTree T>) 
 	Output : (<ArrayTree>)
+	// (n of T.nodes) fh(n)
+	// (child of n.children) stack+(child)
 */
 
 preorder(T) : <ArrayTree> {
 	res[]
 
-	traverse(T) : <ArrayTree> {
+	fh(T) : <ArrayTree> {
 		if (!T) ∆ res
 
 		res+(T.val)
-		(child of T.children) traverse(child)
+		fh(T.LEFT)
+		fh(T.RITE)
 
 		∆ res
 	}
@@ -27,9 +30,10 @@ preorder2(T) : <ArrayTree> {
 	if (!T) ∆ res
 
 	while (stack):
-		node = stack.pop()
+		n = stack.pop()
 		res+(node.val)
-		(child of node.children) stack+(child)
+		if (n.LEFT) stack+(n.LEFT)
+		if (n.RITE) stack+(n.RITE)
 
 	∆ res
 }

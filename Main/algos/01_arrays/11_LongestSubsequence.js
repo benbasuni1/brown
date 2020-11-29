@@ -1,6 +1,6 @@
 /*
 	🕑 O() -- 🛰 O()
-	00. Longest Continuous Increasing Subsequence
+	11. Longest Continuous Increasing Subsequence
 	Input  : (<ArrayInt a>) 
 	Output : (<Int>)
 */

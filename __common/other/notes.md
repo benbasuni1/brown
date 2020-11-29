@@ -63,3 +63,7 @@ j - 1 => down
 
 ## Hash maps
 "item.hasOwnProperty(a)" is the same as "(a in item)"
+
+## Top-Down Tree
+* Can you determine parameters to help the node know its answer? 
+* Can you use these parameters and the value of the node to determine what should be the parameters passed to its children?
