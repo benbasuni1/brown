@@ -8,11 +8,12 @@
 nextPermutation(<Array int a>) : <Array int> {
 	i = len(a) - 2
 	j = len(a) - 1
+	aI, nextI, aJ
 
-	while (a.i >= a.i + 1) i--;
+	while (i >= 0 && aI >= nextI) i--;
 
 	if (i >= 0):
-		while (a.i >= a.j) j--;
+		while (j>=0 && aI >= aJ) j--;
 		swap(a.i, a.j)
 
 	∆ reverse(a, i + 1)
