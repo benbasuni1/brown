@@ -1,7 +1,7 @@
-const u = require('../../../__common/utils');
+const { helper: utils, log, line } = require('../../__common/utils');
  
-// Time  o(n log n)
-// Space o(n)
+// 🕑 O(n log n)
+// 🛰 O(n)
 const mergeIntervals = a => {
 	let points = [];
 	let res = [];
@@ -10,7 +10,8 @@ const mergeIntervals = a => {
 		points.push([a[i][0], 0]);
 		points.push([a[i][1], 1]);
 	}
-	points.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+
+	points.sort((a, b) => a[0] - b[0]);
 
 	let s = null;
 	let numIntervals = 0;
@@ -25,13 +26,11 @@ const mergeIntervals = a => {
 		}
 	}
 
-	console.log('points', points)
-	console.log('res', res)
 	return res;
 }
  
 const main = () => {
-	mergeIntervals([ [1,3], [3,5], [6,8], [7,9] ]);
+	log(mergeIntervals([ [1,3], [3,5], [6,8], [7,9] ]));
 }
  
 main();

@@ -12,11 +12,13 @@ levelOrder(T) : <ArrayTree> {
 	while (que):
 		qlen = len(que)
 		levels[]
+
 		(i < qLen): 
 			n = que.shift()
 			if (n.LEFT) que.push(n.LEFT)
 			if (n.RIGHT) que.push(n.RIGHT)
 			levels+(n.val)
+
 		res+(levels)
 	
 	∆ res
