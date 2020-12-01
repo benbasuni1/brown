@@ -11,20 +11,14 @@ longestPalindromicSubstring(s) : <String> {
 	(i < len(s)):
 		item1 = fh(s, i, i)
 		item2 = fh(s, i, i + 1)
-		longItem = (item1 > item2) ? item1 : item2
-
-		if (len(longItem) > len(res)):
-			res = longItem
+		long = (item1 > item2) ? item1 : item2
+		if (len(long) > len(res)): res = long
 	
 	∆ res
 }
 
 fh(s, i, j) {
-	while ( 
-		i >= 0 && 
-		j < len(s) && 
-		s.i == s.j
-	) j++; i--;
+	while (in-bounds && s.i == s.j) j++; i--;
 
 	∆ s.slice(i + 1, j)
 }

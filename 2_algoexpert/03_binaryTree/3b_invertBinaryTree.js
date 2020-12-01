@@ -5,10 +5,10 @@ const { BinaryTreeNode } = require('../../__common/data_structures/0_node');
 // 🛰 O(n)
 const invertBinaryTree = t => {
 	if (!t) return;
-	swapLR(t);
 	invertBinaryTree(t.left);
 	invertBinaryTree(t.right);
 
+	swapLR(t);
 	return t;
 }
 
@@ -27,11 +27,11 @@ const main = () => {
 	tree.left.left = new BinaryTreeNode(4);
 	tree.left.right = new BinaryTreeNode(5);
 
-	tree.right.left = new BinaryTreeNode(6);
-	tree.right.right = new BinaryTreeNode(7);
+	// tree.right.left = new BinaryTreeNode(6);
+	// tree.right.right = new BinaryTreeNode(7);
 
-	tree.left.left.left = new BinaryTreeNode(8);
-	tree.left.left.right = new BinaryTreeNode(9);
+	// tree.left.left.left = new BinaryTreeNode(8);
+	// tree.left.left.right = new BinaryTreeNode(9);
 	log(invertBinaryTree(tree))
 }
  

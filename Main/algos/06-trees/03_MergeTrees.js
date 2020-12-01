@@ -1,6 +1,6 @@
 /*
 	🕑 O(n) -- 🛰 O(1)
-	00. Merge Trees
+	03. Merge Trees
 	Input  : (<BinaryTree T1>, <BinaryTree T2>) 
 	Output : (<BinaryTree>)
 */
