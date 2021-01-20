@@ -11,7 +11,7 @@ class List {
 	}
 
 	insertAtTail(head, data) {
-		let newNode = new List(data);
+		let newNode = new List(djata);
 
 		if (!head) return newNode;
 		let curr = head;

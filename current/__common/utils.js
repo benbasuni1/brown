@@ -1,5 +1,5 @@
 require('colors');
- const line = () => log("----------------------------------".rainbow);
+const line = () => log("----------------------------------".rainbow);
 
 /* 1. Helper */
 const helper = {

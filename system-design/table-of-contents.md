@@ -1,3 +1,18 @@
+System Design Basics
+1. Basics
+2. Distributed Systems
+3. Load Balancing
+4. Caching
+5. Data Partitioning
+6. Indexes
+7. Proxies
+8. Redundancy and Replication
+9. SQL vs NoSQL
+10. CAP Theorem
+11. Consistent Hashing
+13. Long-polling, Websockets, Server-sent Events
+
+Systems
 1. TinyURL
 2. Pastebin
 3. Instagram
@@ -13,3 +28,4 @@
 13. Yelp
 14. Uber Backend
 15. Ticketmaster
+

@@ -1,0 +1,50 @@
+Labuladong Algo Cheat Sheet
+
+a. Must-Read Frameworks
+  [x] 01 Overall Guide
+  [ ] 02 DP 
+  [ ] 03 Backtracking 
+  [ ] 04 BFS 
+  [ ] 05 Binary Search 
+  [ ] 06 Sliding Window 
+  [ ] 07 Stock Trading 
+  [ ] 08 House Robber ??
+  [ ] 09 Interval 
+  [ ] 10 nSum 
+  [ ] 11 Binary Tree 
+    12 Knapsack 
+    
+b. Data Structures
+  [x] 01 Holistic Learning Ideas
+      [x] * Overall Guide
+      [x] * Book (Algo 4)
+      [x] * Road to Algo Learning
+  [ ] 02 Linked List
+      [x] * Reverse List 2
+      [ ] * Reverse a set of K lists
+      [ ] * Determine Palindrome List
+  [ ] 03 Binary Trees
+  [ ] 04 Complex Data Structures
+  [ ] 05 Arrays  
+
+c. Dynamic Programming
+  01 Basic Skills
+  02 Subsequence Types
+  03 Backpack Types
+  04 Greedy Types
+  05 Other
+
+d. Must Know Algorithms
+  01 DFS/Backtracking
+  02 BFS
+  03 Math
+  04 Other
+
+e. High Frequency Interview Series
+
+f. Technical Article Series
+  01 Linux
+  02 Session/Cookise
+  03 Encryption
+  04 Git/SQL/Regex
+

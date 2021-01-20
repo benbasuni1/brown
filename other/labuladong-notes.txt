@@ -1,0 +1,25 @@
+Storage    - Chain, Sequence
+Operations - Create, Read, Update, Delete
+Traversal  - Iteration, Recursion
+
+* Brush algorithm questions from "Tree" classifications combined with "Framework" thinking.
+* Keep your curiousity about new knowledge and avoid getting stuck in infinite details and being dismissed.
+* Algorithm is mainly to cultivate a new way of thinking.
+* What really opens up your mind is likely to be the gathering of ideas from the great gods in the discussion area.
+* It is best to sort the brushes one by one. Brush Linked List for a few days, then Binary Tree for a few days. This is done to help you extract the "framework".
+  Once a framework for 1 type of problem is summed up, solving similar problems can be said to be easy.
+* I am unable to make a 2-month assault. I simply lengthen the front and fight him for a 2-year guerrilla warfare. I stlil don't believe in the powerful enemy of the
+  undead algorithm. Facts have proved that if you study hard for a month,  you can make visible progress.
+Iteration and Recursion
+* Although the idea of iterative implementation seems simple, there are many details and it is not easy to write correctly. On the contrary, the recursive implementation is very concise and beautiful.  
+
+Lists/Recursion
+* With the help of post-order traversal, you can traverse the linked list in reverse order without explicitly reversing the original linked list.
+* Many readers say that "recursion" is very difficult to understand. To be honest, the recursive solution should be the simplest and easiest to understand. Writing
+  recursive code smoothly is the basic skill of learning algorithms, and the topics related to binary trees are the most practiced recursive basic skills, the most
+practiced framed thinking.
+* With tree problems, first figure out what the current root node should do then call the child nodes recursively according to the function definition.
+* One of the difficulties of binary tree topic is how to refine requirements of the topic of what each node needs to do.
+* Refine the requirements, figure out what the root node should do, then leave the rest to the pre/mid/post order traversal framework.
+
+* if you can’t get interviews, it’s your resume, if you can’t pass them then it’s your interview skills
