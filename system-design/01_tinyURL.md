@@ -1,37 +1,32 @@
 # TinyURL
 
-### 0. Need
-  * Save space
-  * Optimize links across devices for analysis
+* URL shortening is used to optimize links across devices
 
-### 1. Requirements
-Functional:
-  * Given a URL, generate a short alias for it that redirects to original URL.
-  * URL is customizable
-  * Links expire after time
+### Requirements
+  * Front end
+    1. Generate short link.
+    2. Redirect short link 
+    3. Customize short link
+    4. Expires short link
 
-Non-Functional:
-  * High Availability
-  * URL redirection minimize latency
-  * Shortened links should be random
+  * Back end
+    5. High availability
+    6. Min latency
+    7. Randomly generated
 
-Extended:
-  * Analytics: how many times user clicked/redirections
-  * REST APIs
+  * Other
+    8. Analytics
+    9. API availability
 
-### 2. Numbers
-  * Read heavy (100:1 ratio between r/w)
-  * Traffic Estimates
-  * Storage Estimates
-  * Cache Estimates
-  * Network Bandwidth Estimates
+### Estimation
+  1. Read-heavy (100:1 read/write ratio)
+  2. Traffic Estimates
+  3. Storage Estimates
+  4. Bandwidth Estimates
+  5. Memory Estimates
 
-### 3. API Design (Interfaces)
-  * Parameters. Returns, API Rate Limiting
+### System API
 
-### 4. Database Design
+### Database Design
 
-### 5. Solve
-
-### 6. Extra (Load balancing/cache, etc)
 

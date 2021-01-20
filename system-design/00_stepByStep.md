@@ -18,6 +18,13 @@
   * Draw core system (5-6 boxes)
 
 6. Detailed Design
-  * Draw deeper into 2-3 major components
+  * Dig deeper into 2-3 major components
+  * Ex: Partitioning Data, Bottleneck, Timeline, Cache, load balancing
 
 7. Bottlenecks
+  * Single points of failure, Monitoring, Replicas of data
+
+Summary
+* Preparation and being organized are keys to success in system design interviews
+
+  
