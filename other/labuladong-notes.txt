@@ -22,4 +22,7 @@ practiced framed thinking.
 * One of the difficulties of binary tree topic is how to refine requirements of the topic of what each node needs to do.
 * Refine the requirements, figure out what the root node should do, then leave the rest to the pre/mid/post order traversal framework.
 
+BST
+* The result of BSTs In-Order Traversals are ascending/sorted
+
 * if you can’t get interviews, it’s your resume, if you can’t pass them then it’s your interview skills

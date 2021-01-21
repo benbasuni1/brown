@@ -67,3 +67,9 @@ j - 1 => down
 ## Top-Down Tree
 * Can you determine parameters to help the node know its answer? 
 * Can you use these parameters and the value of the node to determine what should be the parameters passed to its children?
+
+
+Justin
+----------------
+* This solution is one of many, and it solidifies most computer science / system design concepts in one coherent flow which is why it's so useful.
+* 
