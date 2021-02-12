@@ -8,43 +8,116 @@ a. Must-Read Frameworks
   [ ] 05 Binary Search 
   [ ] 06 Sliding Window 
   [ ] 07 Stock Trading 
-  [ ] 08 House Robber ??
+  [ ] 08 House Robber
   [ ] 09 Interval 
   [ ] 10 nSum 
   [ ] 11 Binary Tree 
-    12 Knapsack 
+  [ ] 12 Knapsack 
     
 b. Data Structures
   [x] 01 Holistic Learning Ideas
       [x] * Overall Guide
       [x] * Book (Algo 4)
       [x] * Road to Algo Learning
-  [ ] 02 Linked List
+  [x] 02 Linked List
       [x] * Reverse List 2
-      [ ] * Reverse a set of K lists
-      [ ] * Determine Palindrome List
-  [ ] 03 Binary Trees
+      [x] * Reverse a set of K lists
+      [x] * Determine Palindrome List
+  [x] 03 Trees
+      [x] * BT 1
+      [x] * BT 2
+      [x] * BT 3
+      [x] * BST 1
+      [x] * BST 2
+      [x] * BT Serialization
   [ ] 04 Complex Data Structures
+      [ ] * Union Find
+      [ ] * Union Find 2
+      [ ] * LFU
+      [ ] * LRU
+      [ ] * Find Median
+      [ ] * Design Twitter
+      [ ] * Stack
+      [ ] * Queue
+      [ ] * Binary Heap
+      [ ] * Queue w/ 2 Stacks
   [ ] 05 Arrays  
+      [ ] * Binary Search
+      [ ] * Double Pointers
+      [ ] * Delete/Find O(1)
+      [ ] * Deduplicatin of Arrays ?
+      [ ] * in-situ modification ?
+      [ ] * twoSum Problem
 
 c. Dynamic Programming
-  01 Basic Skills
-  02 Subsequence Types
-  03 Backpack Types
-  04 Greedy Types
-  05 Other
+  [ ] 01 Basic Skills
+      [ ] * Framework
+      [ ] * Planning Answers
+      [ ] * State Compression
+      [ ] * Who is the father of backtracking/dp?
+  [ ] 02 Subsequence Types
+      [ ] * Classic DP: Edit Distance
+      [ ] * Envelope Nesting
+      [ ] * Largest Sub-array
+      [ ] * Longest Common Subsequence
+      [ ] * Subsequence Template
+  [ ] 03 Backpack Types
+      [ ] * Classic DP: Subset Knapsack
+      [ ] * Classic DP: Complete Knapsack
+      [ ] * Classic DP: 0-1 knapsack
+  [ ] 04 Greedy Types
+      [ ] * Interval Schedule
+      [ ] * Jumping Games?
+  [ ] 05 Other
+      [ ] * Regex
+      [ ] * Throwing Eggs in High Building
+      [ ] * Throwing Eggs in High Building 2
+      [ ] * Poke the Balloon
+      [ ] * Game Problem
+      [ ] * 4-key keyboard
 
 d. Must Know Algorithms
-  01 DFS/Backtracking
-  02 BFS
-  03 Math
-  04 Other
+  [ ] 01 DFS/Backtracking
+      [ ] * Framework
+      [ ] * Subset, Permutation, Combination
+      [ ] * Solving Sudoku
+      [ ] * Parenthesis Generation
+  [ ] 02 BFS
+      [ ] * Framework
+      [ ] * BFS Algo
+  [ ] 03 Math
+      [ ] * Bit Operations
+      [ ] * 2 common factorial Q's
+      [ ] * Find Prime Numbers
+      [ ] * Modular Exponentiation
+      [ ] * Find Missing Elements
+      [ ] * Find Missing and Duplicate Elements
+      [ ] * Sample Elements in an Infinite Sequence
+      [ ] * Remove Dups in Ordered Array
+      [ ] * Algo's that can be solved in 1 line
+      [ ] * Probability
+  [ ] 04 Other
+      [ ] * Prefixes and Arrays
+      [ ] * Difference Array
+      [ ] * Quick Sort
+      [ ] * Divide and Conquer
 
 e. High Frequency Interview Series
+  [ ] 04 Other
+      [ ] * Eating Grapes?
+      [ ] * Biscuits Sorting Algo
+      [ ] * String Multiplication Calculation
+      [ ] * Implement a Calculator
+      [ ] * Rainwater Problem
+      [ ] * Longest Palindrome String
+      [ ] * Legality of Parenthesis
+      [ ] * Perfect Rectangle
+      [ ] * Schedule Candidate Seats
+      [ ] * Binary Search for Efficient Decision Subsequence
 
 f. Technical Article Series
-  01 Linux
-  02 Session/Cookise
-  03 Encryption
-  04 Git/SQL/Regex
+  [ ] * Linux
+  [ ] * Session/Cookise
+  [ ] * Encryption
+  [ ] * Git/SQL/Regex
 

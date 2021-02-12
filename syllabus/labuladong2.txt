@@ -1,0 +1,33 @@
+1. Recursion
+2. List/Trees
+
+3. DP
+4. DFS/Backtracking
+  - Subset, Permutation, Combination
+  - Solving Sudoku
+  - Parenthesis Generation
+  - Knapsack 
+
+5. Arrays
+  - Binary Search
+  - Sliding Window 
+  - Stock Trading 
+  - House Robber
+  - Interval 
+  - nSum
+  - Binary Search
+  - Double Pointers
+  - Delete/Find O(1)
+  - Deduplication of Arrays ?
+  - in-situ modification ?
+
+Union Find
+Union Find 2
+LFU
+LRU
+Find Median
+Design Twitter
+Stack
+Queue
+Binary Heap
+Queue w/ 2 Stacks

@@ -1,4 +1,4 @@
-const u = require('../../__common/utils');
+const u = require('../../../__common/utils');
  
 // Time  o(n)
 // Space o(n)
@@ -14,10 +14,8 @@ const climbingStepsTopDown = n => {
 		let nMinus5 = j - 5 < 0 ? 0 : a[j - 5];
 
 		a[j] = nMinus1 + nMinus3 + nMinus5;	
-		u.par(a, j, n);
 	}
 
-	console.log('a[n]', a[n])
 	return a[n];
 }
  

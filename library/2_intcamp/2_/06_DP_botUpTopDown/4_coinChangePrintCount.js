@@ -1,24 +1,22 @@
-const u = require('../../__common/utils');
+const u = require('../../../__common/utils');
  
-// Time  o()
-// Space o()
-const coinChangePrintCount = (coins, amount) => {
-	let a = Array(amount + 1).fill(0);
-	a[0] = 1;
+// 🕑 O(an)
+// 🛰 O(n)
+const coinChangePrintCount = (n, a) => {
+	let dp = Array(1 + n).fill(0);
+	dp[0] = 1;
 
-	for (let i = 0; i < coins.length; i++) {
-		let coin = coins[i];
-		for (let j = coin; j <= amount; j++) {
-			a[j] = a[j] + a[j - coin]
+	for (let coin of a) {
+		for (let i = coin; i < dp.length; i++) {
+			dp[i] = dp[i] + dp[i - coin]
 		}
 	}
 
-	console.log('a[amount]', a[amount])
-	return a[amount];
+	return dp.pop();
 }
  
 const main = () => {
-	coinChangePrintCount([1, 2, 5], 5);
+	console.log(coinChangePrintCount(5, [1, 2, 5]));
 }
  
 main();

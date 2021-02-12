@@ -3,20 +3,20 @@
 * URL shortening is used to optimize links across devices
 
 ### 1. Requirements
-  * Front end
-    1. Generate short link.
-    2. Redirect short link 
-    3. Customize short link
-    4. Expires short link
+Front end
+  * Unique URL
+  * Customized Link
+  * Expiration
+  * Redirect
 
-  * Back end
-    5. High availability
-    6. Min latency
-    7. Randomly generated
+Back end
+  * High availability
+  * Min latency
+  * Random
 
-  * Other
-    8. Analytics
-    9. API availability
+Other
+  * Analytics
+  * REST API
 
 ### 2. Estimation
   1. Read-heavy (100:1 read/write ratio)

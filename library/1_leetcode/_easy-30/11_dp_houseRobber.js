@@ -6,15 +6,12 @@ const houseRobber = a => {
 	if (a.length === 0) return 0;
 	else if (a.length === 1) return a[0];
 
-	let memo = {
-		0: a[0],
-		1: Math.max(a[0], a[1])
-	};
+	let dp = [a[0], Math.max(a[0], a[1])];
   
-	for(let i = 2; i < a.length; i++)
-	  memo[i] = Math.max(a[i] + memo[i - 2] , memo[i - 1]);
+	for (let i = 2; i < a.length; i++)
+	  dp[i] = Math.max(a[i] + dp[i - 2] , dp[i - 1]);
   
-	return memo[a.length - 1];
+	return dp.pop();
 }
  
 const main = () => {
