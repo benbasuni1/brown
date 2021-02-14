@@ -20,9 +20,30 @@ const permutations = a => {
 	fh(a)
 	return res;
 }
+
+const permutations2 = a => {
+	let results = [];
+	
+	let permutations = (path, selection) => {
+		if(!selection.length) {
+			results.push(path);
+			return;
+		}
+
+		for(let i = 0; i < selection.length; i++) {
+			path.push(selection[i]); 
+			permutations(path.slice(), selection.slice(0, i).concat(selection.slice(i+1))); 
+			path.pop(); 
+		}
+	};
+	
+	permutations([], a);
+	return results;
+}
  
 const main = () => {
-	log(permutations([1, 2, 3]))
+	// log(permutations([1, 2, 3]))
+	log(permutations2([1, 2, 3]))
 }
  
 main();

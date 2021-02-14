@@ -1,25 +1,24 @@
 1. Recursion
 2. List/Trees
 
-3. DP
-4. DFS/Backtracking
-  - Subset, Permutation, Combination
-  - Solving Sudoku
-  - Parenthesis Generation
-  - Knapsack 
-
-5. Arrays
+3. Arrays
   - Binary Search
   - Sliding Window 
   - Stock Trading 
   - House Robber
   - Interval 
   - nSum
-  - Binary Search
   - Double Pointers
   - Delete/Find O(1)
   - Deduplication of Arrays ?
   - in-situ modification ?
+
+4. DP
+5. DFS/Backtracking
+  - Subset, Permutation, Combination
+  - Solving Sudoku
+  - Parenthesis Generation
+  - Knapsack 
 
 Union Find
 Union Find 2
